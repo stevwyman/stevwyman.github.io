@@ -1,5 +1,8 @@
 # Some information on Game Theory
 
+These are my notes while taking ECON 159. Based on those I have created a little python tool to help solve payoff matrices. This helped me understand the topic better 
+[Repository](https://github.com/stevwyman/game_theory)
+
 ## Terminology
 
 ### Zero-Sum Game vs Non-Zero-Sum Game
