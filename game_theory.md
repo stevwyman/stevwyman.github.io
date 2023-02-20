@@ -5,6 +5,10 @@ These are my notes while taking ECON 159. Based on those I have created a little
 
 Lessons:
 
+Probably the most important lesson from game theory is that your decission impacts the decisson findings process of others, which is also true for what others think you will decide.
+
+If you understood this - go spend your time with something way more fun.
+
 1. You should never play a strictly dominated strategy.
 2. Rational play by rational players can lead to bad outcomes
 3. To gure out what actions you should choose in a game, a good rst step is to gure out what are your payoffs (what do you care about) and what are other players' payoffs.
