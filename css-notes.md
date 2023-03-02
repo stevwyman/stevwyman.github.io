@@ -1,20 +1,9 @@
----
-- [Game Theory](/game_theory.md)
-   - [Negotiations](/negotiations.md)
-- [Python](/python.md)
-- [Web Dev](/web-dev.md)
-   - [CSS](/css.md)
----
-
----
-
-- [Game Theory](/game_theory.md)
-   - [Negotiations](/negotiations.md)
-
-- [Python](/python.md)
-- [Web Dev](/web-dev.md)
-   - [CSS](/css-notes.md)
-
+<!-- Top Navigation -->
+* [Game Theory](/game_theory.md)
+   * [Negotiations](/negotiations.md)
+* [Python](/python.md)
+* [Web Dev](/web-dev.md)
+   * [CSS](/css-notes.md)
 ---
 
 # Notes on CSS
@@ -22,13 +11,9 @@
 Some notes on css ...
 
 ---
-
-Navigation
-
-- [Addressing](#addressing-elements)
-- [Responsiveness](#responsiveness)
-- [SASS](#sass)
-
+* [Addressing](#addressing-elements)
+* [Responsiveness](#responsiveness)
+* [SASS](#sass)
 ---
 
 ## Addressing elements
