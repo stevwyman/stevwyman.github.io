@@ -1,3 +1,21 @@
+---
+- [Game Theory](/game_theory.md)
+   - [Negotiations](/negotiations.md)
+- [Python](/python.md)
+- [Web Dev](/web-dev.md)
+   - [CSS](/css.md)
+---
+
+# <a name="css-top"></a>Notes on CSS
+
+Some notes on css ...
+
+---
+- [Addressing](#addressing-elements)
+- [Responsivness](#responsiveness)
+- [SASS](#sass)
+---
+
 ## Addressing elements
 
 inline
@@ -42,7 +60,7 @@ use the below selectors to assign styles to specific attributes
 |a:b|Pseudoclass|
 |a::b|Pseudoelement|
 
-The below redes only list items, that are children from an unordered list in blue: 
+The below redes only list items, that are children from an unordered list in blue:
 
 ```html
 <style>
@@ -81,25 +99,29 @@ Color only one link
 </html>
 ```
 
-## Responsive
+<p align="right">(<a href="#css-top">back to top</a>)</p>
+
+---
+
+## <a name="responsiveness"></a>Responsiveness
 
 media query using @media (min-width) make background red
 
 Flexbox:
 #container {
-    display: flex;
-    flex-wrap: wrap;
+display: flex;
+flex-wrap: wrap;
 }
 
 #container > div {
-    background-color: springgreen;
-    font-size: 20px;
-    margin: 20px;
+background-color: springgreen;
+font-size: 20px;
+margin: 20px;
 }
 
 ### Flexbox
 
-```
+```css
 <style>
     .container {
         display: flex;
@@ -137,3 +159,21 @@ Flexbox:
     }
 </style>
 ```
+
+<p align="right">(<a href="#css-top">back to top</a>)</p>
+
+---
+
+## <a name="sass"></a>SASS
+
+With sass, we can apply some basic coding principles to css. This can help ba **inherit** attributes and to group attributes.
+
+Usage:
+
+```sh
+sass source.scss:target.css
+```
+
+<p align="right">(<a href="#css-top">back to top</a>)</p>
+
+---

@@ -6,6 +6,14 @@
    - [CSS](/css.md)
 ---
 
+---
+- [Game Theory](/game_theory.md)
+   - [Negotiations](/negotiations.md)
+- [Python](/python.md)
+- [Web Dev](/web-dev.md)
+   - [CSS](/css.md)
+---
+
 # Negotiations
 
 Negotiations can be seen as either zero-sum games or as non-zero-sum games. The strategy behind the different approaches can result from a cultural background or from the relationship between the two parties.
