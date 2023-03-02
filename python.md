@@ -1,6 +1,14 @@
+<!-- Top Navigation -->
+* [Game Theory](/game_theory.md)
+   * Negotiations
+* Python
+* [Web Dev](/web-dev.md)
+   * [Style](/css-notes.md)
+---
+
 ## Python Tool Kit
 
-Some helpfull tools when developping using python. Even though python is made for quick and dirty hacking, there is also a way to somehow propper write code which is readable and maintainable. THe two tools below can help with that.
+Some helpful tools when developing using python. Even though python is made for quick and dirty hacking, there is also a way to somehow properly write code which is readable and maintainable. THe two tools below can help with that.
 
 ### pytest
 

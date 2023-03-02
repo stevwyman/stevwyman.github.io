@@ -1,9 +1,9 @@
 <!-- Top Navigation -->
-* [Game Theory](/game_theory.md)
+* Game Theory
    * [Negotiations](/negotiations.md)
 * [Python](/python.md)
 * [Web Dev](/web-dev.md)
-   * [CSS](/css-notes.md)
+   * [Style](/css-notes.md)
 ---
 
 # Notes on Game Theory
@@ -26,7 +26,7 @@ This is due to the strategic nature of Game Theory. It provides support for deci
 
 Lessons:
 
-Probably the most important lesson from game theory is that your decission impacts the decision findings process of others, which is also true for what others think you will decide.
+Probably the most important lesson from game theory is that your decision impacts the decision findings process of others, which is also true for what others think you will decide.
 
 If you understood this - go spend your time with something way more fun.
 

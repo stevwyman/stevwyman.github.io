@@ -3,7 +3,7 @@
    * [Negotiations](/negotiations.md)
 * [Python](/python.md)
 * [Web Dev](/web-dev.md)
-   * [CSS](/css-notes.md)
+   * Style
 ---
 
 # Notes on CSS
