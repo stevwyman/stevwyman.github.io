@@ -8,10 +8,10 @@
 
 ---
 - [Game Theory](/game_theory.md)
-   - [Negotiations](/negotiations.md)
+  - [Negotiations](/negotiations.md)
 - [Python](/python.md)
 - [Web Dev](/web-dev.md)
-   - [CSS](/css.md)
+  - [CSS](/css-notes.md)
 ---
 
 # Negotiations

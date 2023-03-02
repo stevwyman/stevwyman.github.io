@@ -11,7 +11,7 @@
    - [Negotiations](/negotiations.md)
 - [Python](/python.md)
 - [Web Dev](/web-dev.md)
-   - [CSS](/css.md)
+   - [CSS](/css-notes.md)
 ---
 
 # <a name="game-theory-top"></a>Notes on Game Theory

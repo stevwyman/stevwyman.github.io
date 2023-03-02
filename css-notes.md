@@ -6,19 +6,34 @@
    - [CSS](/css.md)
 ---
 
+---
+
+- [Game Theory](/game_theory.md)
+   - [Negotiations](/negotiations.md)
+
+- [Python](/python.md)
+- [Web Dev](/web-dev.md)
+   - [CSS](/css-notes.md)
+
+---
+
 # Notes on CSS
-<a name="css-top"></a>
 
 Some notes on css ...
 
 ---
+
+Navigation
+
 - [Addressing](#addressing-elements)
 - [Responsiveness](#responsiveness)
 - [SASS](#sass)
+
 ---
 
 ## Addressing elements
-<a name="addressing-elements"></a>
+
+The following are some ways to address elements in a html file to apply some styles to them:
 
 inline
 
@@ -106,7 +121,6 @@ Color only one link
 ---
 
 ## Responsiveness
-<a name="responsiveness"></a>
 
 media query using @media (min-width) make background red
 
@@ -168,7 +182,6 @@ margin: 20px;
 ---
 
 ## SASS
-<a name="sass"></a>
 
 With sass, we can apply some basic coding principles to css. This can help ba **inherit** attributes and to group attributes.
 
