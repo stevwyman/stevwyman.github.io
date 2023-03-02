@@ -7,5 +7,6 @@ here are some of my notes taken during classes
    * [Negotiations](/negotiations.md)
 * [Python](/python.md)
 * [Web Dev](/web-dev.md)
-   * [Style](/css-notes.md)
+   * [CSS](/css-notes.md)
+
 ---
