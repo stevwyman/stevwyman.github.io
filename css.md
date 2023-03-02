@@ -6,17 +6,19 @@
    - [CSS](/css.md)
 ---
 
-# <a name="css-top"></a>Notes on CSS
+# Notes on CSS
+<a name="css-top"></a>
 
 Some notes on css ...
 
 ---
 - [Addressing](#addressing-elements)
-- [Responsivness](#responsiveness)
+- [Responsiveness](#responsiveness)
 - [SASS](#sass)
 ---
 
 ## Addressing elements
+<a name="addressing-elements"></a>
 
 inline
 
@@ -103,7 +105,8 @@ Color only one link
 
 ---
 
-## <a name="responsiveness"></a>Responsiveness
+## Responsiveness
+<a name="responsiveness"></a>
 
 media query using @media (min-width) make background red
 
@@ -164,7 +167,8 @@ margin: 20px;
 
 ---
 
-## <a name="sass"></a>SASS
+## SASS
+<a name="sass"></a>
 
 With sass, we can apply some basic coding principles to css. This can help ba **inherit** attributes and to group attributes.
 
