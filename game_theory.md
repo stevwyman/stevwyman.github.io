@@ -1,7 +1,36 @@
+---
+- [Game Theory](/game_theory.md)
+  - [Negotiations](/negotiations.md) 
+- [Python](/python.md)
+- [Web Dev]
+  - [CSS](/css.md)
+---
+
+---
+- **Game Theory**
+   - [Negotiations](/negotiations.md)
+- [Python](/python.md)
+- [Web Dev]
+   - [CSS](/css.md)
+---
+
 # Notes on Game Theory
 
 These are my notes while taking ECON 159. Based on those I have created a little python tool to help solve payoff matrices. This helped me understand the topic better
 [Repository](https://github.com/stevwyman/game_theory)
+
+There are many fields where Game Theory could get applied, the most known are probably:
+
+* [negotiations](/negotiations.md)
+* military
+* tennis
+
+This is due to the strategic nature of Game Theory. It provides support for decission making processes.
+
+---
+<a name="readme-top"></a>
+- (<a href="#terminology-top">Terminology</a>)
+---
 
 Lessons:
 
@@ -19,7 +48,11 @@ If you understood this - go spend your time with something way more fun.
 8. If (s^; s^) is not a NE then s^ is not evolutionarily stable. Or, equivalently: if s^ is evolutionarily stable, then (s^; s^) is a NE.
 9. If (s^; s^) is a strict NE then s^ is evolutionarily stable.
 
-## Terminology
+### Takeaways
+
+* [Cut and Choose](https://en.wikipedia.org/wiki/Divide_and_choose) How to divide fair.
+
+## Terminology <a name="terminology-top"></a>
 
 Game theory is all about strategy. Hence playing and solving games is about finding strategies and best responses to other strategies. The field of game theory is quiet wide and so are the different games to be played. To structure this ecosystem a bit here is some terminology (jargon).
 
@@ -107,3 +140,5 @@ one player the same payoff and the other player a higher payoff.
 There is a notion of *common* and *mutual* knowledge, but they are not the same. **Common** knowledge is the situation of I know, that you know, that I know, that you know ...
 
 Whereas **mutual** knowledge only holds the information what others know about others.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
