@@ -1,9 +1,10 @@
 <!-- Top Navigation -->
 * [Game Theory](/game_theory.md)
-   * Negotiations
+   * [Negotiations](/negotiations.md)
 * Python
 * [Web Dev](/web-dev.md)
-   * [Style](/css-notes.md)
+   * [CSS](/css-notes.md)
+   
 ---
 
 ## Python Tool Kit

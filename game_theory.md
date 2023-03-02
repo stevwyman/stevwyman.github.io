@@ -3,7 +3,8 @@
    * [Negotiations](/negotiations.md)
 * [Python](/python.md)
 * [Web Dev](/web-dev.md)
-   * [Style](/css-notes.md)
+   * [CSS](/css-notes.md)
+
 ---
 
 # Notes on Game Theory
@@ -20,8 +21,10 @@ There are many fields where Game Theory could get applied, the most known are pr
 This is due to the strategic nature of Game Theory. It provides support for decision making processes.
 
 ---
+
 * [Terminology](#terminology)
 * [Equilibrium](#equilibrium)
+
 ---
 
 Lessons:

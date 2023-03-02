@@ -3,7 +3,8 @@
    * [Negotiations](/negotiations.md)
 * [Python](/python.md)
 * [Web Dev](/web-dev.md)
-   * Style
+   * CSS
+
 ---
 
 # Notes on CSS
@@ -11,9 +12,11 @@
 Some notes on css ...
 
 ---
+
 * [Addressing](#addressing-elements)
 * [Responsiveness](#responsiveness)
 * [SASS](#sass)
+
 ---
 
 ## Addressing elements
