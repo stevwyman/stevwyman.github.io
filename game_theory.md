@@ -21,9 +21,14 @@ There are many fields where Game Theory could get applied, the most known are pr
 This is due to the strategic nature of Game Theory. It provides support for decision making processes.
 
 ---
-
+<a id="game-theory-top"></a>
 * [Terminology](#terminology)
-* [Equilibrium](#equilibrium)
+   * [Sequential vs Simultaneous](#sequential-and-simultaneous-games)
+   * [Zero-Sum vs Non-Zero-Sum](#zero-sum-game-vs-non-zero-sum-game)
+   * [Domination](#domination)
+   * [Equilibrium](#equilibrium)
+   * [Knowledge](#knowledge)
+
 
 ---
 
@@ -61,6 +66,10 @@ Taking two examples here: Tic Tac Toe and Rock Paper Scissors
 * in Rock Paper Scissors, the players simultaneously have to make a decision and do not know what the other is choosing
 
 Therefore the games have different approaches for solving them. Parallel games can be used using payoff matrices and sequential games can be solved by backward induction.
+
+<p align="right">(<a href="#game-theory-top">back to top</a>)</p>
+
+---
 
 ### Zero-Sum Game vs Non-Zero-Sum Game
 
@@ -103,22 +112,40 @@ Examples:
 - [Battle of the Sexes](/Game%20Theory/non-zero-games.md)
 - Deadlock and Stag Hunt
 
+<p align="right">(<a href="#game-theory-top">back to top</a>)</p>
+
+---
+
 ### Domination
 
-Strategies can dominate each other, hence the payoffs for one strategy can be better than others. We use the below definitions as they are relevant for selection of strategies and also for the removal ot them from payoff matrices.
+Strategies can *dominate* each other, hence the payoffs for one strategy can be better than others. We use the below definitions as they are relevant for selecting strategies and also for removing them from payoff matrices.
+
+| |x|y|z|
+|-|-|-|-|
+|1|1,**2**|2,**2**|5,1|
+|2|4,1|3,**5**|3,3|
+|3|**5**,2|**4**,**4**|**7**,0|
+|4|2,3|0,**4**|3,0|
+
+In the above example 3 is a strictly dominant strategy, as it yields the highest payoff regardless what the other player chooses (x, y or z).
+In addition y is only a weakly dominant strategy, as in case player 1 chooses 1, x would yield the same payoff as choosing y.
+
 
 #### Strict Domination
 
-A strictly dominated strategy  for a player yields a strictly lower expected payoff that any other strategy available for the player (regardless of the stra)
-A strictly dominant strategy for a player yields a strictly higher expected payoff than
-any other strategy available to the player, regardless of the strategies chosen by
-everyone else.
+My strategy &alpha; *strictly dominates* my strategy &beta; if my payoff from &alpha; is strictly higher than that from &beta; regardless of others' choices.
+
+A *strictly dominant* strategy for a player yields a strictly higher expected payoff than any other strategy available to the player, regardless of the strategies chosen by everyone else.
 
 #### Weak Domination
 
+My strategy &alpha; *weakly dominates* my strategy &beta; if my payoff from &alpha; is as high as that from &beta; regardless of others' choices, and is strictly higher for at least one such choice.
+
 A strategy that delivers an equal or worse outcome than an alternative strategy.
 
+
 <p align="right">(<a href="#game-theory-top">back to top</a>)</p>
+
 ---
 
 ### Equilibrium
@@ -134,6 +161,7 @@ outcome which would give both players a higher payoff or would give
 one player the same payoff and the other player a higher payoff.
 
 <p align="right">(<a href="#game-theory-top">back to top</a>)</p>
+
 ---
 
 ### Knowledge
@@ -143,4 +171,5 @@ There is a notion of *common* and *mutual* knowledge, but they are not the same.
 Whereas **mutual** knowledge only holds the information what others know about others.
 
 <p align="right">(<a href="#game-theory-top">back to top</a>)</p>
+
 ---
