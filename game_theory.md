@@ -1,6 +1,7 @@
 <!-- Top Navigation -->
 * Game Theory
    * [Negotiations](/negotiations.md)
+   * [Some Games](/gt-games.md)
 * [Python](/python.md)
 * [Web Dev](/web-dev.md)
    * [CSS](/css-notes.md)
@@ -15,20 +16,19 @@ These are my notes while taking ECON 159. Based on those I have created a little
 There are many fields where Game Theory could get applied, the most known are probably:
 
 * [negotiations](/negotiations.md)
-* military
-* tennis
+* military (Cortes or William te conqueror)
+* tennis, soccer (penalty shot)
 
 This is due to the strategic nature of Game Theory. It provides support for decision making processes.
 
 ---
 <a id="game-theory-top"></a>
-* [Terminology](#terminology)
-   * [Sequential vs Simultaneous](#sequential-and-simultaneous-games)
-   * [Zero-Sum vs Non-Zero-Sum](#zero-sum-game-vs-non-zero-sum-game)
-   * [Domination](#domination)
-   * [Equilibrium](#equilibrium)
-   * [Knowledge](#knowledge)
-
+* [Sequential vs Simultaneous](#sequential-and-simultaneous-games)
+* [Zero-Sum vs Non-Zero-Sum](#zero-sum-game-vs-non-zero-sum-game)
+* [Domination](#domination)
+* [Equilibrium](#equilibrium)
+* [Strategies](#strategies)
+* [Knowledge](#knowledge)
 
 ---
 
@@ -66,6 +66,12 @@ Taking two examples here: Tic Tac Toe and Rock Paper Scissors
 * in Rock Paper Scissors, the players simultaneously have to make a decision and do not know what the other is choosing
 
 Therefore the games have different approaches for solving them. Parallel games can be used using payoff matrices and sequential games can be solved by backward induction.
+
+Repeated games are not equal to Stochastic games -> see also Markov Decision Process
+
+Learning in Game Theory
+* Fictitious Play
+* No-regret Learning
 
 <p align="right">(<a href="#game-theory-top">back to top</a>)</p>
 
@@ -116,7 +122,35 @@ Examples:
 
 ---
 
-### Domination
+### Coalition Games
+
+**Coalitional Game** is given by specifying a value for every coalition. 
+Formally, the coalitional game consists of a finite set of players N, called the **grand coalition**, 
+and a characteristic function v: 2 ^ N -> ℝ from the set of all possible coalitions of players to a set of payments 
+that satisfies v(∅)=0.
+
+Two ways for allocating payoffs:
+* Shapley value: based on marginal contributions - what does each player contribute to each possible coalition; 
+   * "fair" distribution.
+ * Core: based on coalitional threats - each coalition must get at least what it can generate alone; 
+   * "stable" distribution. 
+
+#### convex Games
+
+A game is **convex** if its characteristic function v is supermodular:
+
+
+that is, "the incentives for joining a coalition increase as the coalition grows".
+
+**Theorem**
+>Every convex game has a nonempty core.
+>In every convex game, the Shapley value is in the core.
+
+<p align="right">(<a href="#game-theory-top">back to top</a>)</p>
+
+---
+
+### Dominance
 
 Strategies can *dominate* each other, hence the payoffs for one strategy can be better than others. We use the below definitions as they are relevant for selecting strategies and also for removing them from payoff matrices.
 
@@ -129,6 +163,16 @@ Strategies can *dominate* each other, hence the payoffs for one strategy can be 
 
 In the above example 3 is a strictly dominant strategy, as it yields the highest payoff regardless what the other player chooses (x, y or z).
 In addition y is only a weakly dominant strategy, as in case player 1 chooses 1, x would yield the same payoff as choosing y.
+
+Dominated strategies can be strictly dominated or weakly dominated:
+
+* A strategy is strictly (or strongly) dominated if it leads to worse outcomes than alternative strategies.
+* A strategy is weakly dominated if it leads to equal or worse outcomes than alternative strategies.
+
+Dominant strategies can be strictly dominant or weakly dominant:
+
+* A strategy is strictly (or strongly) dominant if it leads to better outcomes than alternative strategies.
+* A strategy is weakly dominant if it leads to equal or better outcomes than alternative strategies.
 
 
 #### Strict Domination
@@ -154,15 +198,31 @@ A strategy that delivers an equal or worse outcome than an alternative strategy.
 
 The players are playing a best response to each other. No regrets - no individual can do strictly better by deviating, holding others fixed.
 
+> Theorem (Nash, 1950): Every finite game has a Nash Equilibrium.
+
 #### Pareto Optimum
 
-Definition: An outcome is Pareto optimal if there is no other
-outcome which would give both players a higher payoff or would give
-one player the same payoff and the other player a higher payoff.
+Definition: An outcome is Pareto optimal if there is no other outcome, which would give both players a higher payoff, or would give one player the same payoff and the other player a higher payoff.
+
+A Nash equilibrium is not necessarily Pareto optimal, and vice versa.
+
+#### Sub-Game Perfect Equilibrium
+
+Nash equilibrium that represents a Nash equilibrium of every subgame in the original game. It's a refinement of the Nash equilibrium that eliminates non-credible threats.
+
+**Non-credible Threat** - a threat made by a player in an extensive form game which would not be in the best interest for the player to carry out. The hope is that the threat is believed in which case there is no need to carry it out. While Nash equilibria may depend on non-credible threats, Backward Induction eliminates them.
+
+**Backward Induction** - identify the equilibria in the bottom-most trees, and adopt these as one moves up the tree.
 
 <p align="right">(<a href="#game-theory-top">back to top</a>)</p>
 
 ---
+
+### Strategies
+
+**Tit-for-tat** Start out cooperating. If the opponent defected, defect in the next round. THen go back to cooperation.
+
+**Grim Trigger** Start out cooperating. If the opponent ever defects, defect forever.
 
 ### Knowledge
 

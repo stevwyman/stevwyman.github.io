@@ -23,7 +23,7 @@ In terms of information, we also see both types. There are scenarios where all i
 
 **ZOPA** stands for Zone of Possible Agreement
 
-**Shapley Value** For each party in the group, it is the amount of pie created by that party joining others in the group,averaged across all possible orderings in which parties join the group.
+[**Shapley Value**](#shapley-value) For each party in the group, it is the amount of pie created by that party joining others in the group,averaged across all possible orderings in which parties join the group.
 
 ### Takeaways
 
@@ -81,3 +81,13 @@ This can become even more disturbing: [property law in the Talmud](https://mindy
 ### Offer and Counteroffer over time
 
 see also Game Theory: [Ultimatum](/some-games.md#ultimatum)
+
+### Shapley Value
+
+Lloyd Shapley’s idea: members should receive payments or shares proportional to their marginal contributions. THe following three axioms need to hold:
+
+* Interchangeable agents should receive the same shares/payments.
+* Dummy players should receive nothing.
+* If we can separate a game into two parts v=v1 +v2,then we should be able to decompose the payments
+
+<img src="img/shaply-value.png" />
