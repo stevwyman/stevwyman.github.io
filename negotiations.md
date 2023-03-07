@@ -1,10 +1,12 @@
 <!-- Top Navigation -->
-* [Game Theory](/game_theory.md)
-   * Negotiations
+* Game Theory
+   * *Negotiations*
+   * [Some Games](/gt-games.md)
+   * [Representation](/gt-representation.md)
+   * [Strategies for solving](/gt-strategies.md)
 * [Python](/python.md)
 * [Web Dev](/web-dev.md)
-   * [CSS](/css-notes.md)
-   
+
 ---
 
 # Negotiations

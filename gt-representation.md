@@ -1,3 +1,14 @@
+<!-- Top Navigation -->
+* Game Theory
+   * [Negotiations](/negotiations.md)
+   * [Some Games](/gt-games.md)
+   * *Representation*
+   * [Strategies for solving](/gt-strategies.md)
+* [Python](/python.md)
+* [Web Dev](/web-dev.md)
+
+---
+
 # Game Representation
 
 **Players** who are the decision makers?

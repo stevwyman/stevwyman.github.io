@@ -1,3 +1,14 @@
+<!-- Top Navigation -->
+* Game Theory
+   * [Negotiations](/negotiations.md)
+   * [Some Games](/gt-games.md)
+   * [Representation](/gt-representation.md)
+   * *Strategies for solving*
+* [Python](/python.md)
+* [Web Dev](/web-dev.md)
+
+---
+
 # Iterated deletion of (weakly) dominated strategies
 
 # Minimax Strategy
