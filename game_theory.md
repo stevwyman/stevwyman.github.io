@@ -1,5 +1,5 @@
 <!-- Top Navigation -->
-* Game Theory
+* *Game Theory*
    * [Negotiations](/negotiations.md)
    * [Some Games](/gt-games.md)
    * [Representation](/gt-representation.md)

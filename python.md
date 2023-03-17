@@ -1,9 +1,8 @@
 <!-- Top Navigation -->
+* [Psychology](/psycholgy.md)
 * [Game Theory](/game_theory.md)
-   * [Negotiations](/negotiations.md)
-* Python
+* *Python*
 * [Web Dev](/web-dev.md)
-   * [CSS](/css-notes.md)
    
 ---
 

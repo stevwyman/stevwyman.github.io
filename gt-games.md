@@ -1,4 +1,5 @@
 <!-- Top Navigation -->
+* [Psychology](/psycholgy.md)
 * Game Theory
    * [Negotiations](/negotiations.md)
    * *Some Games*
@@ -67,7 +68,8 @@ Analysing strict dominance ...
 
 #### Solving
 
-The prisoner's dilemma can be solved by plying the game repeatedly **without** a notion of an ending. Then the strategy of building a reputation can help, so that both parties cooperate.
+The prisoner's dilemma can be solved by playing the game repeatedly **without** a notion of an ending. Then the strategy of building a reputation can help, so that both parties cooperate.
+
 
 ### Sharing Game
 

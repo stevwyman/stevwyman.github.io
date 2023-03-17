@@ -3,7 +3,8 @@
 here are some of my notes taken during classes
 
 
-* Game Theory
+* [Psychology](/psycholgy.md) 
+* [Game Theory](/game_theory.md)
    * [Negotiations](/negotiations.md)
    * [Some Games](/gt-games.md)
    * [Representation](/gt-representation.md)

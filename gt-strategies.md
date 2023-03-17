@@ -1,4 +1,5 @@
 <!-- Top Navigation -->
+* [Psychology](/psycholgy.md)
 * Game Theory
    * [Negotiations](/negotiations.md)
    * [Some Games](/gt-games.md)
@@ -27,4 +28,26 @@ According to the maximin principle, the player should never gamble, because he f
 >In any finite, two-player, zero-sum game, in any Nash equilibrium each player receives a payoff that is equal to both his maxmin value and his minmax value.
 
 ## Correlated Equilibrium
+
+Robert Aumann created this solution concept. 
+A correlated strategy may be regarded as a randomized plan of coordinated actions of both players, which is performed by using communication (involving, for example, a ”mediator”)
+
+# Some findings from applying strategies
+
+## Tit for Tat
+
+The great computer scientist Robert Axelrod created a challenge to ask for computer programs playing each other the prisoner's dilemma. The winner was created by Anatol Rappaport who has a four line code. 
+* Be good and play cooperative at first
+* play all following games by replicating what the opponent did before (n-1)
+
+THis created the best score and is know as tot for tat as it is is a forgiving strategy. you are basically always good, only when betrayed, you punish the other the next round.
+
+* NICE - starts friendly
+* NOT A SUCKER - If you defect, it will defect back
+* FORGIVING - Once you’re nice, it’ll be nice right back
+* TRANSPARENT - Easy to figure out how to work together for mutual gain
+
+## Grimm Trigger
+
+The Grimm Trigger Strategy can be described as, cheat on me once and I will always until eternity defect on you. As the tit for tat the strategy starts out cooperative, as everyone likes nice people. But as soon as any player defects, the other will from then onwards play defect always.
 

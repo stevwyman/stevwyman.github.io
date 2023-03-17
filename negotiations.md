@@ -1,4 +1,5 @@
 <!-- Top Navigation -->
+* [Psychology](/psycholgy.md)
 * Game Theory
    * *Negotiations*
    * [Some Games](/gt-games.md)
