@@ -87,3 +87,36 @@ and within your method, or declaration you can use the following:
         opponent_strategy_set: list[Strategy] = self._opponent.strategy_set
         player_strategy_set: list[Strategy] = self._player.strategy_set
 ```
+
+## web
+
+### Django
+
+#### some commands
+
+pip3 install Django
+
+django-admin startproject PROJECT_NAME
+
+python manage.py runserver
+
+python manage.py startapp APP_NAME
+
+#### structure
+
+* manage.py: utility for interacting with project 
+* PROJECT_NAME/settings.py: settings and configuration 
+    * add here the app you would like to install
+* PROJECT_NAME/urls.py: URLs that can be visited
+    * example: path("tasks/", include("tasks.urls")),
+
+under APP_NAME/urls.py, using path("<str:name>", views.greet1, name="greet"), you can take the url as parameter input
+
+under APP_NAME/views.py, using
+````
+def greet1(request, name):
+    return render(request, "hello/greet.html", {
+        "name": name.capitalize()
+    })
+```
+
