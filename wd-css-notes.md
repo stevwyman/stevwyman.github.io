@@ -1,9 +1,11 @@
 <!-- Top Navigation -->
 * [Psychology](/psycholgy.md)
 * [Game Theory](/game_theory.md)
-* [Python](/python.md)
+* [Web Development](/web-dev.md)
+    * [Python](/wd-python.md)
+    * *CSS*
+    * [SQL](/wd-sql.md)
 * [Web Dev](/web-dev.md)
-   * *CSS*
 
 ---
 
