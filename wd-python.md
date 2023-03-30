@@ -136,6 +136,8 @@ class FlightTestCase(TestCase):
         self.assertEqual(a.departures.count(), 3)
 ```
 
+for testing web functionality you might want to use selenium
+
 #### some commands
 
 pip3 install Django

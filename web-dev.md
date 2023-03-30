@@ -9,7 +9,80 @@
 
 # Web Development
 
+
 This section is focussed on web development using python, sql, js and django
+
+## git
+
+to switch between branches
+
+```sh
+git branch
+git checkout <selected-branch>
+```
+
+to create a new branch to work on new feature use the 
+```sh
+git checkout -b ＜new-branch＞
+```
+
+### git actions
+
+running workflows, specified in YAML
+
+````
+name: Testing
+on: push
+
+jobs:
+  test_project:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run Django unit tests
+      run: |
+        pip3 install --user django
+        python3 manage.py test
+
+````
+
+## Docker
+
+Dockerfile
+````
+FROM python:3
+COPY .  /usr/src/app
+WORKDIR /usr/src/app
+RUN pip install -r requirements.txt
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
+````
+
+docker-compose.yml
+
+````
+version: '3'
+
+services:
+    db:
+        image: postgres
+
+    web:
+        build: .
+        volumes:
+            - .:/usr/src/app
+        ports:
+            - "8000:8000"
+
+````
+
+with 
+```sh
+docker ps
+``` 
+we can list the docker container and then with the container id we can access the app
+```sh
+docker exec -it <id> bash -l
+```
 
 
 ## JavaScript
