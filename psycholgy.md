@@ -1,8 +1,7 @@
 <!-- top navigation -->
 * *Psychology*
 * [Game Theory](/game_theory.md)
-* [Python](/python.md)
-* [Web Dev](/web-dev.md)
+* [Web Development](/web-dev.md)
 
 ---
 

@@ -5,13 +5,26 @@
     * *Python*
     * [CSS](/wd-css-notes.md)
     * [SQL](/wd-sql.md)
-* [Web Dev](/web-dev.md)
    
 ---
 
 ## Python Tool Kit
 
 Some helpful tools when developing using python. Even though python is made for quick and dirty hacking, there is also a way to somehow properly write code which is readable and maintainable. THe two tools below can help with that.
+
+### unit test
+
+```py
+import unittest
+
+from prime import is_prime
+
+class Tests(unittest.TestCase):
+
+    def test_1(self):
+        """Check that 1 is not prime."""
+        self.assertFalse(is_prime(1))
+```
 
 ### pytest
 
@@ -94,6 +107,34 @@ and within your method, or declaration you can use the following:
 ## web
 
 ### Django
+
+#### testing
+
+python manage.py test
+
+> Note: this test will create a new database and destroys it afterwards
+
+```py
+from django.test import Client, TestCase
+
+# Create your tests here.
+class FlightTestCase(TestCase):
+
+    def setUp(self):
+
+        # Create airports.
+        a1 = Airport.objects.create(code="AAA", city="City A")
+        a2 = Airport.objects.create(code="BBB", city="City B")
+
+        # Create flights.
+        Flight.objects.create(origin=a1, destination=a2, duration=100)
+        Flight.objects.create(origin=a1, destination=a1, duration=200)
+        Flight.objects.create(origin=a1, destination=a2, duration=-100)
+
+    def test_departures_count(self):
+        a = Airport.objects.get(code="AAA")
+        self.assertEqual(a.departures.count(), 3)
+```
 
 #### some commands
 

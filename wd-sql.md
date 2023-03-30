@@ -5,7 +5,6 @@
     * [Python](/wd-python.md)
     * [CSS](/wd-css-notes.md)
     * *SQL*
-* [Web Dev](/web-dev.md)
 
 # SQL
 

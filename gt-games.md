@@ -1,12 +1,11 @@
 <!-- Top Navigation -->
 * [Psychology](/psycholgy.md)
-* Game Theory
+* [Game Theory](/game_theory.md)
    * [Negotiations](/negotiations.md)
    * *Some Games*
    * [Representation](/gt-representation.md)
    * [Strategies for solving](/gt-strategies.md)
-* [Python](/python.md)
-* [Web Dev](/web-dev.md)
+* [Web Development](/web-dev.md)
 
 ---
 
