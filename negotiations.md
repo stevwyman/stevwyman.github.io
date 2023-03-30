@@ -20,6 +20,11 @@ The non-zero-sum negotiation is the classical win-win situation, where both part
 
 In terms of information, we also see both types. There are scenarios where all information is on the table and can be simply used to calculate the "best result". But there are also scenarios, where not all information is visible to the other side, those can be hidden agendas or the information is plain false.
 
+#### Expanding the pie
+
+It might help to cooperate to expand the pie, it is easier to get a big piece of the pie, if the pie itself is bigger. So understand if you are in a zero-sum game or if you can transition to a non-zero game. For this reevaluate the goal of the game. 
+Is it it beat the other party, or to get something from a 3rd party? See Barry's Armwrestling game.
+
 ### Terminology
 
 **BATNA** your best alternative to a negotiated agreement
@@ -63,6 +68,8 @@ This applies to splitting an underlying in terms of the weight of each claims.
 
 This is a method taught at Yale University by ...
 
+The pie is the difference between the benefit the negotiating parties could get if they work together and the sum of the benefits each party could get on its own.
+
 The idea is it to first understand the claims and then to understand what the pie is to share. So first: *What is the pie*: What the two parties can create together vs. on their own.
 
 ### The Talmud
@@ -94,3 +101,21 @@ Lloyd Shapley’s idea: members should receive payments or shares proportional t
 * If we can separate a game into two parts v=v1 +v2,then we should be able to decompose the payments
 
 <img src="img/shaply-value.png" />
+
+
+As Mark Twain famously said: Never try to teach a pig to sing. It wastes your time and annoys the pig.
+
+
+### I cut you choose
+
+### Texas Shoot out
+
+Let’s look at the Texas Shoot-Out between Anju and Bharat with new numbers. Imagine Anju knows Bharat values the painting at $200, but Bharat only knows Anju's value is somewhere between $800–$1,000.
+
+If Bharat offered Anju a price of $400, would he expect Anju to say Buy or Sell?
+
+
+* *Buy*
+* Sell
+
+That's right. Anju values the painting at something between $800–$1,000. Buying at a price of $400 leaves her something between $400 and $600 ahead. In contrast, selling for $400 leaves her exactly $400 ahead. Thus buying always leaves Anju in a better position than selling when the price is $400.

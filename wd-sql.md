@@ -9,6 +9,11 @@
 
 # SQL
 
+wildcards
+
+% series of characters
+_ single character
+
 ## Create flights table
 ```sql
 CREATE TABLE flights (
