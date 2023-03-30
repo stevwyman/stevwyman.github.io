@@ -10,4 +10,31 @@
 
 # Web Development
 
-THis section is focussed on web development using python, sql, js and django
+This section is focussed on web development using python, sql, js and django
+
+
+## JavaScript
+
+access dom elements
+
+* document.querySelector('tag')
+* document.querySelector('#id')
+* document.querySelector('.class')
+
+Local Storage
+
+* localStorage.getItem(key) 
+* localStorage.setItem(key, value)
+
+```js
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // Change the color of the heading when dropdown changes
+        document.querySelector('#color-change').onchange = function() {
+            document.querySelector('#hello').style.color = this.value;
+        };
+
+    });
+</script>
+```
