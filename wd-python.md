@@ -108,6 +108,19 @@ and within your method, or declaration you can use the following:
 
 ### Django
 
+#### usefully commands
+
+```sh
+pip3 install Django
+django-admin startproject PROJECT_NAME
+python manage.py startapp APP_NAME
+python manage.py createsuperuser
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+```
+
+
 #### testing
 
 python manage.py test
@@ -137,16 +150,6 @@ class FlightTestCase(TestCase):
 ```
 
 for testing web functionality you might want to use selenium
-
-#### some commands
-
-pip3 install Django
-
-django-admin startproject PROJECT_NAME
-
-python manage.py runserver
-
-python manage.py startapp APP_NAME
 
 #### structure
 

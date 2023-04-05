@@ -13,6 +13,28 @@ wildcards
 % series of characters
 _ single character
 
+## format output
+
+```sql
+.mode column
+.mode table
+.headers on
+.separator ROW "\n"
+.nullvalue NULL
+```
+
+### usefully
+
+= is case sensitive, LIKE is not
+.schema to describe the database
+pragma table_info('longlist');
+
+asc from smallest to greatest (default)
+desc from greatest to smallest
+
+length(data) vs MAX/MIN
+
+
 ## Create flights table
 ```sql
 CREATE TABLE flights (
