@@ -99,6 +99,7 @@ docker exec -it <id> bash -l
 There are some tricky pitfalls when working with docker:
 
 * make sure the target architecture matches
+    * docker buildx build --platform=linux/amd64 -t <image-name> .
 * no deployment using docker import/export as this is dropping CMD or ENTRYPOINT metadata information, especially when using plesk
     * manually cp/ftp/... image to remote server and use the docker load
     * use dockerhub
