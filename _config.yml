@@ -1,8 +1,6 @@
 remote_theme: jekyll/minima
 
-header_pages: 
-  - web-dev.md
-  - game_theory.md
+header_pages:
   - psychology.md
 
 plugins:
