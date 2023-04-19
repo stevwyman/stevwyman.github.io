@@ -1,4 +1,4 @@
-remote-theme: jekyll/minima
+remote_theme: jekyll/minima
 
 header_pages:
   - psychology.md
