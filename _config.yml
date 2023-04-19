@@ -1,4 +1,13 @@
+title: My Notes
+description: Some of my notes for quick referencce
+author: "Stev Wyman"
 theme: minima
+github_username: stevwyman
+header_pages: 
+  - web-dev.md
+  - gaem_theory.md
+  - psychology.md
+
 plugins:
   - jekyll-relative-links
 relative_links:
