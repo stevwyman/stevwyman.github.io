@@ -1,24 +1,10 @@
-theme: minima
+remote-theme: jekyll/minima
 
 header_pages:
   - psychology.md
 
-plugins:
-  - jekyll-relative-links
-
-relative_links:
-  enabled: true
-  collections: true
-
-include:
-  - README.md
-  - web-dev.md
-  - game_theory.md
-  - psychology.md
-  - gt_games.md
-  - gt-representation.md
 
 minima:
   social_links:
-    - { platform: github,  user_url: "https://github.com/jekyll/jekyll" }
-    - { platform: twitter, user_url: "https://twitter.com/jekyllrb" }
+    - { platform: github,  user_url: "https://github.com/stevwyman" }
+    - { platform: twitter, user_url: "https://twitter.com/comwyca" }
