@@ -1,7 +1,10 @@
 remote_theme: jekyll/minima
 
 header_pages:
-  - psychology.md
+  - _pages/psychology.md
+
+include:
+  _pages
 
 
 minima:
