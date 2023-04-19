@@ -6,9 +6,6 @@ Psychology Yale PSYC 110
 Game Theory from Stanford and Yale (ECON 159)
 Python and web Dev from Harvard's CS50
 
-version 0.4
-
-
 
 * [Psychology](/psycholgy.md) 
 * [Game Theory](/game_theory.md)
