@@ -1,11 +1,11 @@
 title: My Notes
-description: Some of my notes for quick referencce
+description: Some of my notes for quick reference
 author: "Stev Wyman"
-theme: minima
+remote_theme: jekyll/minima
 github_username: stevwyman
 header_pages: 
   - web-dev.md
-  - gaem_theory.md
+  - game_theory.md
   - psychology.md
 
 plugins:
