@@ -1,11 +1,5 @@
 remote_theme: jekyll/minima
 
-title: My Notes
-description: Some of my notes for quick reference
-author.name: "Stev Wyman"
-
-github_username: stevwyman
-
 header_pages: 
   - web-dev.md
   - game_theory.md
