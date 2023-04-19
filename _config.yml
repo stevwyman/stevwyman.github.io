@@ -1,8 +1,11 @@
+remote_theme: jekyll/minima
+
 title: My Notes
 description: Some of my notes for quick reference
-site.author.name: "Stev Wyman"
-remote_theme: jekyll/minima
+author.name: "Stev Wyman"
+
 github_username: stevwyman
+
 header_pages: 
   - web-dev.md
   - game_theory.md
@@ -10,11 +13,15 @@ header_pages:
 
 plugins:
   - jekyll-relative-links
+
 relative_links:
   enabled: true
   collections: true
+
 include:
   - README.md
+  - web-dev.md
   - game_theory.md
+  - psychology.md
   - gt_games.md
   - gt-representation.md
