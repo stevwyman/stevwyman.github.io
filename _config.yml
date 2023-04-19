@@ -1,6 +1,6 @@
 title: My Notes
 description: Some of my notes for quick reference
-author: "Stev Wyman"
+site.author.name: "Stev Wyman"
 remote_theme: jekyll/minima
 github_username: stevwyman
 header_pages: 
