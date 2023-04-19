@@ -19,4 +19,5 @@ Python and web Dev from Harvard's CS50
     * [CSS](/wd-css-notes.md)
     * [SQL](/wd-sql.md)
 
+version 0.2
 ---
