@@ -20,3 +20,12 @@ Python and web Dev from Harvard's CS50
     * [SQL](/wd-sql.md)
 
 ---
+
+
+CS50 Links
+
+* [DevEnv](https://code.cs50.io)
+* [Grading](https://cs50.me)
+* Course
+    * [Web](https://cs50.harvard.edu/web/2020/)
+    * [SQL](https://cs50.harvard.edu/sql/2023/zoom/)
