@@ -1,11 +1,10 @@
-# stevwyman.github.io
+# my Notes
 
-here are some of my notes taken during classes
+here are some of my notes taken during classes:
 
-Psychology Yale PSYC 110
-Game Theory from Stanford and Yale (ECON 159)
-Python and web Dev from Harvard's CS50
-
+* Psychology Yale PSYC 110
+* Game Theory from Stanford and Yale (ECON 159)
+* Python and web Dev from Harvard's CS50
 
 
 * [Psychology](/psycholgy.md) 
@@ -18,6 +17,7 @@ Python and web Dev from Harvard's CS50
     * [Python](/wd-python.md)
     * [CSS](/wd-css-notes.md)
     * [SQL](/wd-sql.md)
+
 
 ---
 

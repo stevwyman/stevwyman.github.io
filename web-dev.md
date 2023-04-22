@@ -57,6 +57,16 @@ RUN pip install -r requirements.txt
 CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
 ````
 
+```sh
+docker build -t <image> <path to Dockerfile>
+```
+
+to run the above image and be able to access port 8000 from the host use:
+
+```sh
+docker run -p 8000:8000 <image>
+```
+
 docker-compose.yml
 
 ````
@@ -84,6 +94,18 @@ we can list the docker container and then with the container id we can access th
 docker exec -it <id> bash -l
 ```
 
+### Pitfalls
+
+There are some tricky pitfalls when working with docker:
+
+* make sure the target architecture matches
+    * docker buildx build --platform=linux/amd64 -t <image-name> .
+* no deployment using docker import/export as this is dropping CMD or ENTRYPOINT metadata information, especially when using plesk
+    * manually cp/ftp/... image to remote server and use the docker load
+    * use dockerhub
+* before pushing your image to the hub, you need to tag it
+    * docker tag firstimage YOUR_DOCKERHUB_NAME/firstimage
+    * docker push YOUR_DOCKERHUB_NAME/firstimage
 
 ## JavaScript
 

@@ -8,6 +8,8 @@
 
 # SQL
 
+[sqlite3](https://sqlite.org/lang_keywords.html)
+
 wildcards
 
 % series of characters
@@ -25,6 +27,8 @@ _ single character
 
 ### usefully
 
+ctrl l  cleat terminal
+
 = is case sensitive, LIKE is not
 .schema to describe the database
 pragma table_info('longlist');
@@ -33,6 +37,29 @@ asc from smallest to greatest (default)
 desc from greatest to smallest
 
 length(data) vs MAX/MIN
+
+[scaler functions](/https://www.sqlite.org/lang_corefunc.html)
+
+## joins
+
+inner join is default, showing only entries where ids match
+
+outer joins:
+    left is the first and the one after join is the right
+
+    left outer join
+    -> keeps the left where is not NULL
+
+    right outer join
+    -> keeps the right where is not NULL
+
+    full join
+    -> keep all NULL values
+
+    natural join
+    -> no duplicate id columns and no NULL
+
+
 
 
 ## Create flights table
