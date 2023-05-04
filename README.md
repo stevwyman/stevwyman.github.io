@@ -20,3 +20,12 @@ here are some of my notes taken during classes:
 
 
 ---
+
+
+CS50 Links
+
+* [DevEnv](https://code.cs50.io)
+* [Grading](https://cs50.me)
+* Course
+    * [Web](https://cs50.harvard.edu/web/2020/)
+    * [SQL](https://cs50.harvard.edu/sql/2023/zoom/)
