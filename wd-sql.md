@@ -38,6 +38,13 @@ desc from greatest to smallest
 
 length(data) vs MAX/MIN
 
+```sql
+.timer on -- to get info on RUNTIME
+````
+* real time is the elapsed time as according to the clock on the wall
+* user time is the time spent executing instructions in user mode
+* sys time is the time spent executing instructions in supervisor mode
+
 [scaler functions](/https://www.sqlite.org/lang_corefunc.html)
 
 ## joins
@@ -120,3 +127,53 @@ SELECT first, origin, destination FROM flights JOIN passengers ON passengers.fli
 ```sql
 CREATE INDEX name_index ON passengers (last);
 ```
+
+## Optimisation
+
+### Transaction
+ACID 
+* Atomicity
+* Consistency
+* Isolation
+* Durability
+
+```sql
+BEGIN TRANSACTION
+...
+COMMIT;
+```
+
+
+### Index
+A structure used to speed up the retrieval of rows from a table
+
+### Covering Index
+An index in which queried data can be retrieved from the index itself
+
+### B-Tree
+A balanced tree structure commonly used to create an index
+
+### Partial Index
+
+using a WHERE condition, i.e. movies "year"=2023
+
+### sample
+
+to see what the database is doing use:
+```sql
+sqlite> EXPLAIN QUERY PLAN
+   ...> SELECT "title" FROM "movies" WHERE "id" IN (
+   ...>     SELECT "movie_id" FROM "stars" WHERE "person_id" = (
+   ...>         SELECT "id" FROM "people" WHERE "name" = 'Tom Hanks'
+   ...>     )
+   ...> );
+QUERY PLAN
+|--SEARCH movies USING INTEGER PRIMARY KEY (rowid=?)
+`--LIST SUBQUERY 2
+   |--SEARCH stars USING INDEX person_index (person_id=?)
+   `--SCALAR SUBQUERY 1
+      `--SEARCH people USING COVERING INDEX name_index (name=?)
+Run Time: real 0.000 user 0.000180 sys 0.000029
+sqlite> 
+```
+
