@@ -1,7 +1,28 @@
+# Project Management
+
+# different methodologies
+
+* Waterfall
+    * strict specifications with the strong need of sign-off proceures
+* Scrum
+    * unclear specifications
+    * short iterations
+* Lean and Sigma Six
+    * derived from manufacturing or product development environments
+        * Lean method came out of Toyota—most specifically the Toyota Production System (TPS)
+        * Six Sigma was initially utilized by Motorola and has since been adopted by other such organizations, including General Electric, Toshiba, and Boeing, among others.
+    * these methodologies relate most naturally to manufacturing and product development work.
+
+## some other popular methodologies
+
+* Critical Path Method (CMP)
+* Critical Chain Project Management
+* Extreme Programming (XP)
+* PRINCE2
+
 ## Agile and Waterfall
 
-<img src="img/GOR_8NERTLKkf_DREYyy9Q_393f9e6151524465af01072a4d129c9a_Screen-Shot-2021-01-31-at-6.18.20-PM.png
-">
+<img src="img/wt_vs_agile.png">
 
 ## different agile implementations / methodologies
 

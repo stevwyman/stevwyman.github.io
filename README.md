@@ -17,6 +17,9 @@ here are some of my notes taken during classes:
     * [Python](/wd-python.md)
     * [CSS](/wd-css-notes.md)
     * [SQL](/wd-sql.md)
+* [Project Management](/pm-overview.md)
+    * [Agile](/pm-agile.md)
+    * [Questions](/pm-questions.md)
 
 
 ---
