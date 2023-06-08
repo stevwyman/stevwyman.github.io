@@ -7,7 +7,7 @@
 * Scrum
     * unclear specifications
     * short iterations
-* Lean and Sigma Six
+* [Lean and Sigma Six](/pm-lean.md)
     * derived from manufacturing or product development environments
         * Lean method came out of Toyota—most specifically the Toyota Production System (TPS)
         * Six Sigma was initially utilized by Motorola and has since been adopted by other such organizations, including General Electric, Toshiba, and Boeing, among others.
@@ -22,7 +22,7 @@
 
 ## Agile and Waterfall
 
-<img src="img/wt_vs_agile.png">
+![waterfall vs Agile](img/wf_vs_agile.png)
 
 ## different agile implementations / methodologies
 
