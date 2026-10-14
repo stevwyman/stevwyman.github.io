@@ -1,20 +1,13 @@
-# Build the Hugo site in this repository and publish it to <owner>.github.io.
+# Build the Hugo site and publish it with GitHub Pages.
 #
-# GitHub only serves https://<owner>.github.io from a repository named
-# <owner>.github.io. This profile repository cannot be that site, so the
-# workflow builds here and pushes the finished files there.
+# This repository is stevwyman.github.io, so Pages serves it at
+# https://stevwyman.github.io. The source stays on main. The built site is
+# uploaded as a Pages artifact. No personal access token and no git push.
 #
-# One-time setup:
-# 1. Create a public repository named <owner>.github.io.
-# 2. Create a fine-grained personal access token whose only repository is
-#    <owner>.github.io, with Contents set to Read and write.
-# 3. In this repository, add an Actions secret named PAGES_DEPLOY_TOKEN
-#    containing that token.
-# 4. In <owner>.github.io, open Settings → Pages and set Build and deployment
-#    to Deploy from a branch, branch main, folder / (root).
+# One-time setup: Settings → Pages → Build and deployment → Source: GitHub Actions.
 #
-# The public READMEs are fetched with the workflow's built-in token. Private
-# repositories are ignored. Forks are ignored unless INCLUDE_FORKS=true.
+# Public READMEs are fetched with the workflow token. Private repositories are
+# ignored. Forks are ignored unless INCLUDE_FORKS=true.
 
 name: Publish site
 
@@ -28,6 +21,8 @@ on:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
 
 concurrency:
   group: pages
@@ -57,45 +52,27 @@ jobs:
           SOURCE_BRANCH: ${{ github.ref_name }}
         run: python3 scripts/build_content.py
 
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v6
+
       - name: Build with Hugo
         env:
-          SITE_URL: https://${{ github.repository_owner }}.github.io/
+          SITE_URL: ${{ steps.pages.outputs.base_url }}/
         run: hugo --gc --minify --cleanDestinationDir --baseURL "$SITE_URL"
 
-      - name: Upload built site
-        uses: actions/upload-artifact@v4
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
         with:
-          name: site
-          path: public
-          retention-days: 7
-          if-no-files-found: error
+          path: ./public
 
-      - name: Require deploy token
-        env:
-          TOKEN: ${{ secrets.PAGES_DEPLOY_TOKEN }}
-          OWNER: ${{ github.repository_owner }}
-          REPO: ${{ github.repository }}
-        run: |
-          set -euo pipefail
-          if [ -z "${TOKEN}" ]; then
-            echo "PAGES_DEPLOY_TOKEN is not set, so the site was built but not published."
-            echo "The built files are attached to this workflow run as the 'site' artifact."
-            echo
-            echo "One-time setup:"
-            echo "1. Create a public repository named ${OWNER}.github.io"
-            echo "2. Create a fine-grained personal access token for that repository with Contents: Read and write"
-            echo "3. In ${REPO}, add an Actions secret named PAGES_DEPLOY_TOKEN"
-            echo "4. In ${OWNER}.github.io, set Settings → Pages → Deploy from a branch → main → / (root)"
-            exit 1
-          fi
-
-      - name: Publish to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          personal_token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
-          external_repository: ${{ github.repository_owner }}/${{ github.repository_owner }}.github.io
-          publish_branch: main
-          publish_dir: ./public
-          user_name: github-actions[bot]
-          user_email: 41898282+github-actions[bot]@users.noreply.github.com
-          full_commit_message: Publish site from ${{ github.repository }}@${{ github.sha }}
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
