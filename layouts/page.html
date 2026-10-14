@@ -1,0 +1,32 @@
+{{ define "main" }}
+  {{ $meta := partial "catalog-meta.html" (.Params.repo_name | default "") }}
+  <article>
+    <p class="back">
+      <a href="{{ "projects/" | relURL }}">Projects</a>
+      {{ with $meta.group }}
+        <a href="{{ printf "/#%s" .id | relURL }}">{{ .title }}</a>
+      {{ end }}
+    </p>
+    <p class="kicker">
+      <span>{{ .Params.repo_name }}</span>
+      {{ with .Params.language }}<span>{{ . }}</span>{{ end }}
+      {{ if .Params.archived }}<span>Archived</span>{{ end }}
+    </p>
+    <h1>{{ .Title }}</h1>
+    <p class="page-meta">
+      {{ with .Params.repo_url }}<a href="{{ . }}">View repository</a>{{ end }}
+      {{ with .Params.homepage }}<a href="{{ . }}">Project site</a>{{ end }}
+      <span>Updated {{ .Date.Format "2 Jan 2006" }}</span>
+    </p>
+    {{ with $meta.flags }}
+      <ul class="topics">
+        {{ range . }}
+          <li><a href="{{ printf "/?flag=%s" . | relURL }}">{{ . }}</a></li>
+        {{ end }}
+      </ul>
+    {{ end }}
+    <div class="prose">
+      {{ .Content }}
+    </div>
+  </article>
+{{ end }}

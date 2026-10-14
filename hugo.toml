@@ -1,0 +1,33 @@
+# Published to https://stevwyman.github.io by .github/workflows/pages.yml.
+# `hugo server` replaces baseURL with the local server address.
+baseURL = 'https://stevwyman.github.io/'
+locale = 'en-us'
+title = 'Stev Wyman'
+enableEmoji = true
+enableRobotsTXT = true
+timeout = '120s'
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  description = 'Public projects by Stev Wyman, rendered from each repository README.'
+  tagline = 'Public projects, built from each repository README.'
+  github = 'https://github.com/stevwyman'
+  website = 'https://stevwyman.com'
+  websiteLabel = 'stevwyman.com'
+  source = 'https://github.com/stevwyman/stevwyman'
+
+[markup]
+  [markup.highlight]
+    noClasses = true
+    style = 'github'
+    guessSyntax = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      table = true
+      strikethrough = true
+      linkify = true
+      taskList = true
+      footnote = true
+      typographer = false

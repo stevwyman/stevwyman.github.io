@@ -1,0 +1,25 @@
+{{- $name := . -}}
+{{- $assigned := slice -}}
+{{- range hugo.Data.projects.projects -}}
+  {{- if eq .name $name -}}
+    {{- $assigned = .flags -}}
+  {{- end -}}
+{{- end -}}
+{{- $flags := slice -}}
+{{- range hugo.Data.projects.flag_order -}}
+  {{- if and $assigned (in $assigned .) -}}
+    {{- $flags = $flags | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- range $assigned -}}
+  {{- if not (in $flags .) -}}
+    {{- $flags = $flags | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- $group := false -}}
+{{- range hugo.Data.projects.groups -}}
+  {{- if in .repos $name -}}
+    {{- $group = . -}}
+  {{- end -}}
+{{- end -}}
+{{- return dict "flags" $flags "group" $group -}}

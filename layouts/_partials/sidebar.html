@@ -1,0 +1,38 @@
+{{ $onList := or .IsHome (and (eq .Kind "section") (eq .Section "projects")) }}
+<aside class="sidebar">
+  <a class="identity" href="{{ "/" | relURL }}">
+    <img class="avatar" src="{{ "avatar.jpg" | relURL }}" alt="" width="104" height="104">
+    {{ if .IsHome }}
+      <h1 class="brand">{{ site.Title }}</h1>
+    {{ else }}
+      <p class="brand">{{ site.Title }}</p>
+    {{ end }}
+  </a>
+  <p class="tagline">{{ site.Params.tagline | default site.Params.description }}</p>
+  <nav aria-label="Site">
+    <a href="{{ "projects/" | relURL }}" {{ if and (eq .Section "projects") (not .IsHome) }}aria-current="page"{{ end }}>Projects</a>
+    {{ range hugo.Data.projects.groups }}
+      <a href="{{ printf "/#%s" .id | relURL }}">{{ .title }}</a>
+    {{ end }}
+    {{ with site.Params.github }}<a href="{{ . }}">GitHub</a>{{ end }}
+    {{ with site.Params.website }}<a href="{{ . }}">{{ site.Params.websiteLabel | default "Website" }}</a>{{ end }}
+  </nav>
+  {{ with hugo.Data.projects.flag_order }}
+    <div class="flag-block">
+      <p class="sidebar-label" id="flag-label">Flags</p>
+      <div class="flag-filters" role="group" aria-labelledby="flag-label">
+        {{ if $onList }}
+          <a href="{{ $.RelPermalink }}" data-filter="all" aria-pressed="true">All</a>
+          {{ range . }}
+            <a href="?flag={{ . }}" data-filter="{{ . }}">{{ . }}</a>
+          {{ end }}
+        {{ else }}
+          <a href="{{ "/" | relURL }}" data-filter="all">All</a>
+          {{ range . }}
+            <a href="{{ printf "/?flag=%s" . | relURL }}" data-filter="{{ . }}">{{ . }}</a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+</aside>

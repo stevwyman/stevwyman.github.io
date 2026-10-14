@@ -1,0 +1,14 @@
+{{ define "main" }}
+  {{ $html := .Content }}
+  {{ $titles := findRE `(?s)<h1\b[^>]*>.*?</h1>` .Content 1 }}
+  {{ if $titles }}
+    {{ $heading := index $titles 0 }}
+    {{ if in $heading site.Title }}
+      {{ $html = replace $html $heading "" }}
+    {{ end }}
+  {{ end }}
+  <div class="prose intro">
+    {{ $html | safeHTML }}
+  </div>
+  {{ partial "project-groups.html" (where site.RegularPages "Section" "projects") }}
+{{ end }}

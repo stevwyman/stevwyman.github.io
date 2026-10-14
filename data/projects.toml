@@ -1,0 +1,92 @@
+# Flags and groups for the public repositories.
+# flag_order is the order in the sidebar. A repository can carry more than one flag.
+# Add another [[groups]] block to cluster more repositories.
+# Repositories left out of this file still appear, under Projects, with no flags.
+
+flag_order = ["AI", "work", "container", "finance"]
+
+[[groups]]
+id = "nodes"
+title = "Nodes"
+summary = "RootNode and the services beside it for faces, text, handwriting, color, and structured queries."
+repos = ["facenode", "rootnode", "parsenode", "colornode", "textnode", "htrnode"]
+
+[[projects]]
+name = "facenode"
+flags = ["AI"]
+
+[[projects]]
+name = "textnode"
+flags = ["AI"]
+
+[[projects]]
+name = "htrnode"
+flags = ["AI"]
+
+[[projects]]
+name = "colornode"
+flags = ["AI"]
+
+[[projects]]
+name = "parsenode"
+flags = ["AI"]
+
+[[projects]]
+name = "voxpod"
+flags = ["AI"]
+
+[[projects]]
+name = "chatbot"
+flags = ["AI"]
+
+[[projects]]
+name = "InstructLab_knowledge"
+flags = ["AI"]
+
+[[projects]]
+name = "silent.dolphin"
+flags = ["AI"]
+
+[[projects]]
+name = "mediator"
+flags = ["work"]
+
+[[projects]]
+name = "toodles"
+flags = ["work"]
+
+[[projects]]
+name = "projectmanagement"
+flags = ["work"]
+
+[[projects]]
+name = "vet_clinic"
+flags = ["work"]
+
+[[projects]]
+name = "bruteforce-protect"
+flags = ["work"]
+
+[[projects]]
+name = "sonicmd"
+flags = ["container"]
+
+[[projects]]
+name = "dagobert"
+flags = ["container"]
+
+[[projects]]
+name = "crontainer"
+flags = ["container"]
+
+[[projects]]
+name = "genTree"
+flags = ["container"]
+
+[[projects]]
+name = "finra_bonds"
+flags = ["finance"]
+
+[[projects]]
+name = "open_interest"
+flags = ["finance"]

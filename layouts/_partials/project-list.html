@@ -1,0 +1,9 @@
+{{ if not . }}
+  <p class="empty">No public projects yet.</p>
+{{ else }}
+  <ul class="cards">
+    {{ range .ByDate.Reverse }}
+      {{ partial "project-card.html" . }}
+    {{ end }}
+  </ul>
+{{ end }}

@@ -1,0 +1,20 @@
+{{ $meta := partial "catalog-meta.html" (.Params.repo_name | default "") }}
+{{ $flags := $meta.flags }}
+<li class="card" data-flags="{{ delimit $flags "," }}"{{ with $meta.group }} data-group="{{ .id }}"{{ end }}>
+  <a href="{{ .RelPermalink }}">
+    {{ if or .Params.language .Params.archived }}
+      <span class="kicker">
+        {{ with .Params.language }}<span>{{ . }}</span>{{ end }}
+        {{ if .Params.archived }}<span>Archived</span>{{ end }}
+      </span>
+    {{ end }}
+    <h3>{{ .Title }}</h3>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    {{ with $flags }}
+      <span class="card-flags">
+        {{ range . }}<span>{{ . }}</span>{{ end }}
+      </span>
+    {{ end }}
+    <span class="meta">Updated {{ .Date.Format "2 Jan 2006" }}</span>
+  </a>
+</li>

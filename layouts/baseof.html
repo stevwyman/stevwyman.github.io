@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  {{ partial "sidebar.html" . }}
+  <div class="content">
+    <main id="content">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+  </div>
+  {{ with resources.Get "js/flags.js" }}
+    {{ $script := . | minify | fingerprint }}
+    <script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+  {{ end }}
+</body>
+</html>

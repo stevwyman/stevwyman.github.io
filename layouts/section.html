@@ -1,0 +1,9 @@
+{{ define "main" }}
+  <header class="page-intro">
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}
+      <div class="prose">{{ . }}</div>
+    {{ end }}
+  </header>
+  {{ partial "project-groups.html" .RegularPages }}
+{{ end }}

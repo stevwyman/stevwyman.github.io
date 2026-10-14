@@ -1,0 +1,50 @@
+{{ $pages := . }}
+{{ if not $pages }}
+  <p class="empty">No public projects yet.</p>
+{{ else }}
+  {{ $index := newScratch }}
+  {{ range $pages }}
+    {{ $index.Set (printf "%s" .Params.repo_name) . }}
+  {{ end }}
+  {{ $grouped := slice }}
+  {{ range hugo.Data.projects.groups }}
+    {{ range .repos }}
+      {{ $grouped = $grouped | append . }}
+    {{ end }}
+  {{ end }}
+  {{ range hugo.Data.projects.groups }}
+    {{ $group := . }}
+    <section class="project-group" id="{{ $group.id }}" data-group-section>
+      <div class="projects-head">
+        <h2>{{ $group.title }}</h2>
+      </div>
+      {{ with $group.summary }}<p class="group-summary">{{ . }}</p>{{ end }}
+      <ul class="cards">
+        {{ range $group.repos }}
+          {{ with $index.Get . }}
+            {{ partial "project-card.html" . }}
+          {{ end }}
+        {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+  {{ $loose := slice }}
+  {{ range $pages.ByDate.Reverse }}
+    {{ if not (in $grouped (printf "%s" .Params.repo_name)) }}
+      {{ $loose = $loose | append . }}
+    {{ end }}
+  {{ end }}
+  {{ if $loose }}
+    <section class="project-group" data-group-section>
+      <div class="projects-head">
+        <h2>Projects</h2>
+      </div>
+      <ul class="cards">
+        {{ range $loose }}
+          {{ partial "project-card.html" . }}
+        {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+  <p class="empty" id="filter-empty" hidden>No projects with that flag.</p>
+{{ end }}
